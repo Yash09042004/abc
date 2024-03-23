@@ -22,19 +22,20 @@ function Signup() {
         <div className="d-flex justify-content-center align-items-center bg-secondary vh-100"
         style={{ backgroundImage: `url(${backgroundImage})` }}>
         
-        <div style={{ backgroundColor: 'purple', color: 'white' }} className="p-3 rounded w-25">
+        <div style={{ backgroundColor: 'purple', color: 'white', borderRadius: '15px' }} className="p-3 rounded w-25">
             <h2>Register</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="email">
+                    <label htmlFor="name">
                         <strong>Name</strong>
                     </label>
                     <input
                     type = "text"
                     placeholder="Enter Name"
                     autoComplete="off"
-                    name = "email"
+                    name = "name"
                     className="form-control rounded-0"
+                    style={{ border: '1px solid gray' }}
                     onChange={(e) => setName(e.target.value)}
                     />
                 </div>
@@ -48,20 +49,22 @@ function Signup() {
                     autoComplete="off"
                     name = "email"
                     className="form-control rounded-0"
+                    style={{ border: '1px solid gray' }}
                     onChange={(e) => setEmail(e.target.value)}
                     />
                     </div>
                 
                 <div className="mb-3">
-                    <label htmlFor="email">
+                    <label htmlFor="password">
                         <strong>Password</strong>
                     </label>
                     <input
-                    type = "text"
+                    type = "password"
                     placeholder="Enter Password"
                     autoComplete="off"
-                    name = "email"
+                    name = "password"
                     className="form-control rounded-0"
+                    style={{ border: '1px solid gray' }}
                     onChange={(e) => setPassword(e.target.value)}
                     />
                     </div>
